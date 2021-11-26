@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="match_parent"
+                                                   android:background="@mipmap/clock_image_foreground"
+                                                   android:visibility="visible"
+                                                   tools:context=".MainActivity" android:textDirection="rtl">
+
+
+    <TextView
+            android:id="@+id/age_in_minutes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="X"
+            android:textSize="30dp"
+            app:layout_constraintBottom_toBottomOf="@+id/age2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            android:textColor="#C51162" app:layout_constraintTop_toTopOf="@+id/age2"
+            app:layout_constraintVertical_bias="0.636" android:gravity="left"
+            app:layout_constraintEnd_toStartOf="@+id/age2" android:layout_marginEnd="24dp" android:textDirection="ltr"/>
+    <TextView
+            android:id="@+id/title_of_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:background="#FFD600"
+            android:fontFamily="serif"
+            android:text="محاسبه سن و تبدیل آن به دقیقه"
+            android:textColor="#000000"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="64dp"
+            android:ellipsize="start"
+            android:text="لطفا تاریخ مورد نظر خود را وارد نمایید   "
+            android:textColor="#FF0000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/title_of_app"
+            app:layout_constraintStart_toStartOf="@+id/title_of_app"
+            app:layout_constraintTop_toBottomOf="@+id/title_of_app"/>
+
+    <Button
+            android:id="@+id/selected_age_button"
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:padding="30dp"
+            android:text="انتخاب تاریخ تولد"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
+            android:textColor="#000000"/>
+
+    <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="68dp"
+            android:hapticFeedbackEnabled="false"
+            android:text=":سن"
+            android:textColor="#000000"
+            android:textSize="34sp"
+            android:textDirection="ltr"
+            app:layout_constraintEnd_toEndOf="@+id/selected_age_button"
+            app:layout_constraintTop_toBottomOf="@+id/selected_age_button" android:layout_marginEnd="28dp"/>
+    <TextView
+            android:id="@+id/age_in_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="your age"
+            android:shadowColor="#000000"
+            android:textColor="#000000"
+            android:textColorHint="#4A595454"
+            android:textSize="34sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@+id/age" app:layout_constraintTop_toTopOf="@+id/age"
+            app:layout_constraintEnd_toStartOf="@+id/age" android:layout_marginEnd="24dp" android:gravity="left"
+            android:textDirection="ltr"/>
+
+    <TextView
+            android:id="@+id/age2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="سن به دقیقه:"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/age"
+            app:layout_constraintStart_toStartOf="@+id/age"
+            app:layout_constraintTop_toBottomOf="@+id/selected_age_button" app:layout_constraintHorizontal_bias="0.45"
+            app:layout_constraintVertical_bias="0.609" android:textDirection="rtl"/>
+    <TextView
+            android:id="@+id/age_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            app:layout_constraintTop_toBottomOf="@+id/age"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toTopOf="@+id/age_in_minutes"/>
+    <TextView
+            android:id="@+id/age_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="28dp"
+            android:layout_marginBottom="24dp"
+            android:text="گروه سنی شما"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:id="@+id/group_property"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="age property"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/age_group"
+            app:layout_constraintStart_toStartOf="parent" android:textColor="#000000"
+            app:layout_constraintTop_toTopOf="@+id/age_group" app:layout_constraintEnd_toStartOf="@+id/age_group"
+            android:layout_marginEnd="16dp" android:textDirection="ltr"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
